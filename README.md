@@ -25,3 +25,7 @@ Frontend (User App):
 * Nivriti Bajwa (n3bajwa@uwaterloo.ca)
 * Sam Meydanshahi (smeydans@uwaterloo.ca)
 
+## GitLab Repo
+
+The screenshot below displays the complete commit and branch history from our original UW GitLab repository. Due to privacy policies and migration constraints, the full history remains on GitLab, and this GitHub repository shows only a single, consolidated commit. This static snapshot preserves the detailed evolution of the project during its active development phase.
+
