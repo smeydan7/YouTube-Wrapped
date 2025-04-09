@@ -29,4 +29,4 @@ Frontend (User App):
 
 The screenshot below displays the complete commit and branch history from our original UW GitLab repository. Due to privacy policies and migration constraints, the full history remains on GitLab, and this GitHub repository shows only a single, consolidated commit. This static snapshot preserves the detailed evolution of the project during its active development phase.
 
-![Commit History](YouTubeWrapped/src/main/resources/images/YTWGitHistory.png)
+![Commit History](YoutubeWrapped/src/main/resources/images/YTWGitHistory.png)
