@@ -151,42 +151,39 @@ fun DashboardScreen(
             }
 
 
-            dashboardData?.let {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = "${it.firstName}'s YouTube Wrapped:",
-                        fontSize = 24.sp,
-                        fontWeight = FontWeight.Bold
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 8.dp),
+                horizontalArrangement = Arrangement.End
+            ) {
+                OutlinedButton(
+                    onClick = onUploadData,
+                    modifier = Modifier.height(40.dp),
+                    shape = MaterialTheme.shapes.large,
+                    colors = ButtonDefaults.outlinedButtonColors(
+                        contentColor = MaterialTheme.colorScheme.onSurface
                     )
-
-                    OutlinedButton(
-                        onClick = onUploadData,
-                        modifier = Modifier.height(40.dp),
-                        shape = MaterialTheme.shapes.large,
-                        colors = ButtonDefaults.outlinedButtonColors(
-                            contentColor = MaterialTheme.colorScheme.onSurface
-                        )
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.CloudUpload,
-                            contentDescription = "Upload",
-                            modifier = Modifier.size(18.dp)
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text("Upload new data")
-                    }
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.CloudUpload,
+                        contentDescription = "Upload",
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text("Upload new data")
                 }
+            }
 
+            dashboardData?.let {
+                Text(
+                    text = "${it.firstName}'s YouTube Wrapped:",
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold
+                )
                 Spacer(modifier = Modifier.height(16.dp))
 
-
-                DashboardComponent(
-                    dashboardData = dashboardData,
-                )
+                DashboardComponent(dashboardData = dashboardData)
             } ?: Box(
                 modifier = Modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center
